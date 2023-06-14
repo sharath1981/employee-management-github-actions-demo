@@ -1,0 +1,189 @@
+2023-06-14 20:59:53,972 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-06-14 20:59:54,047 INFO o.s.b.StartupInfoLogger [Test worker] Starting ApplicationTests using Java 20 with PID 1052 (started by 91890 in D:\WORKOUT\VS_CODE\employee-management-github-actions-demo)
+2023-06-14 20:59:54,055 DEBUG o.s.b.StartupInfoLogger [Test worker] Running with Spring Boot v3.1.0, Spring v6.0.9
+2023-06-14 20:59:54,058 INFO o.s.b.SpringApplication [Test worker] No active profile set, falling back to 1 default profile: "default"
+2023-06-14 20:59:55,143 INFO o.s.d.r.c.RepositoryConfigurationDelegate [Test worker] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-14 20:59:55,229 INFO o.s.d.r.c.RepositoryConfigurationDelegate [Test worker] Finished Spring Data repository scanning in 70 ms. Found 1 JPA repository interfaces.
+2023-06-14 20:59:55,885 INFO o.h.j.i.u.LogHelper [Test worker] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-14 20:59:55,984 INFO o.h.Version [Test worker] HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-14 20:59:55,988 INFO o.h.c.Environment [Test worker] HHH000406: Using bytecode reflection optimizer
+2023-06-14 20:59:56,197 INFO o.h.b.i.BytecodeProviderInitiator [Test worker] HHH000021: Bytecode provider name : bytebuddy
+2023-06-14 20:59:56,420 INFO o.s.o.j.p.SpringPersistenceUnitInfo [Test worker] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-14 20:59:56,458 INFO c.z.h.HikariDataSource [Test worker] HikariPool-1 - Starting...
+2023-06-14 20:59:56,543 INFO o.t.u.ImageNameSubstitutor [Test worker] Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2023-06-14 20:59:56,948 INFO o.t.d.DockerClientProviderStrategy [Test worker] Loaded org.testcontainers.dockerclient.NpipeSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2023-06-14 20:59:57,360 INFO o.t.d.DockerClientProviderStrategy [Test worker] Found Docker environment with local Npipe socket (npipe:////./pipe/docker_engine)
+2023-06-14 20:59:57,362 INFO o.t.DockerClientFactory [Test worker] Docker host IP address is localhost
+2023-06-14 20:59:57,384 INFO o.t.DockerClientFactory [Test worker] Connected to docker: 
+  Server Version: 24.0.2
+  API Version: 1.43
+  Operating System: Docker Desktop
+  Total Memory: 7846 MB
+2023-06-14 20:59:57,418 INFO o.t.c.GenericContainer [Test worker] Creating container for image: testcontainers/ryuk:0.4.0
+2023-06-14 20:59:58,053 INFO o.t.c.GenericContainer [Test worker] Container testcontainers/ryuk:0.4.0 is starting: 4daf8c6d4cb08212dafb33a141cec686cb4c74c9b7672daa7e0da769eef23cba
+2023-06-14 20:59:58,849 INFO o.t.c.GenericContainer [Test worker] Container testcontainers/ryuk:0.4.0 started in PT1.4522997S
+2023-06-14 20:59:58,859 INFO o.t.u.RyukResourceReaper [Test worker] Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2023-06-14 20:59:58,859 INFO o.t.DockerClientFactory [Test worker] Checking the system...
+2023-06-14 20:59:58,861 INFO o.t.DockerClientFactory [Test worker] ✔︎ Docker server version should be at least 1.6.0
+2023-06-14 20:59:58,862 INFO o.t.c.GenericContainer [Test worker] Creating container for image: postgres:latest
+2023-06-14 20:59:58,914 INFO o.t.c.GenericContainer [Test worker] Container postgres:latest is starting: 37af36b26e7f99b17d2b00f783db5ab35eb45413e8875216571f05ea1f73635b
+2023-06-14 21:00:01,674 INFO o.t.c.GenericContainer [Test worker] Container postgres:latest started in PT2.8139201S
+2023-06-14 21:00:01,676 INFO o.t.c.JdbcDatabaseContainer [Test worker] Container is started (JDBC URL: jdbc:postgresql://localhost:59721/test?loggerLevel=OFF)
+2023-06-14 21:00:01,978 INFO c.z.h.p.HikariPool [Test worker] HikariPool-1 - Added connection org.testcontainers.jdbc.ConnectionWrapper@590603cf
+2023-06-14 21:00:01,981 INFO c.z.h.HikariDataSource [Test worker] HikariPool-1 - Start completed.
+2023-06-14 21:00:02,100 INFO o.h.e.j.d.i.DialectFactoryImpl [Test worker] HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@6b542f10
+2023-06-14 21:00:02,559 INFO o.h.b.i.BytecodeProviderInitiator [Test worker] HHH000021: Bytecode provider name : bytebuddy
+2023-06-14 21:00:03,392 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [Test worker] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-14 21:00:03,414 DEBUG o.h.e.j.s.SqlStatementLogger [Test worker] drop table if exists employee cascade
+2023-06-14 21:00:03,421 WARN o.h.e.j.s.SqlExceptionHelper$StandardWarningHandler [Test worker] SQL Warning Code: 0, SQLState: 00000
+2023-06-14 21:00:03,422 WARN o.h.e.j.s.SqlExceptionHelper$StandardWarningHandler [Test worker] table "employee" does not exist, skipping
+2023-06-14 21:00:03,429 DEBUG o.h.e.j.s.SqlStatementLogger [Test worker] create table employee (doj date not null, salary float(53) not null, id bigserial not null, gender varchar(255) not null check (gender in ('MALE','FEMALE')), name varchar(255), primary key (id))
+2023-06-14 21:00:03,437 INFO o.h.t.s.i.e.GenerationTargetToDatabase [Test worker] HHH000476: Executing script '[injected ScriptSourceInputNonExistentImpl script]'
+2023-06-14 21:00:03,441 INFO o.s.o.j.AbstractEntityManagerFactoryBean [Test worker] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-14 21:00:03,816 INFO o.s.d.j.r.q.QueryEnhancerFactory [Test worker] Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-06-14 21:00:04,772 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [Test worker] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-14 21:00:05,502 INFO o.s.b.StartupInfoLogger [Test worker] Started ApplicationTests in 12.171 seconds (process running for 15.483)
+2023-06-14 21:00:06,256 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [Test worker] Could not detect default configuration classes for test class [com.ryana.controller.EmployeeControllerAcceptanceTest]: EmployeeControllerAcceptanceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-06-14 21:00:06,268 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [Test worker] Found @SpringBootConfiguration com.ryana.Application for test class com.ryana.controller.EmployeeControllerAcceptanceTest
+2023-06-14 21:00:06,316 INFO o.s.b.StartupInfoLogger [Test worker] Starting EmployeeControllerAcceptanceTest using Java 20 with PID 1052 (started by 91890 in D:\WORKOUT\VS_CODE\employee-management-github-actions-demo)
+2023-06-14 21:00:06,317 DEBUG o.s.b.StartupInfoLogger [Test worker] Running with Spring Boot v3.1.0, Spring v6.0.9
+2023-06-14 21:00:06,317 INFO o.s.b.SpringApplication [Test worker] No active profile set, falling back to 1 default profile: "default"
+2023-06-14 21:00:06,470 INFO o.s.d.r.c.RepositoryConfigurationDelegate [Test worker] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-14 21:00:06,490 INFO o.s.d.r.c.RepositoryConfigurationDelegate [Test worker] Finished Spring Data repository scanning in 19 ms. Found 1 JPA repository interfaces.
+2023-06-14 21:00:06,732 INFO o.s.b.w.e.t.TomcatWebServer [Test worker] Tomcat initialized with port(s): 0 (http)
+2023-06-14 21:00:06,747 INFO o.a.j.l.DirectJDKLog [Test worker] Initializing ProtocolHandler ["http-nio-auto-1"]
+2023-06-14 21:00:06,748 INFO o.a.j.l.DirectJDKLog [Test worker] Starting service [Tomcat]
+2023-06-14 21:00:06,748 INFO o.a.j.l.DirectJDKLog [Test worker] Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-14 21:00:06,834 INFO o.a.j.l.DirectJDKLog [Test worker] Initializing Spring embedded WebApplicationContext
+2023-06-14 21:00:06,836 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [Test worker] Root WebApplicationContext: initialization completed in 516 ms
+2023-06-14 21:00:06,917 INFO o.h.j.i.u.LogHelper [Test worker] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-14 21:00:06,923 INFO o.h.b.i.BytecodeProviderInitiator [Test worker] HHH000021: Bytecode provider name : bytebuddy
+2023-06-14 21:00:06,923 INFO o.s.o.j.p.SpringPersistenceUnitInfo [Test worker] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-14 21:00:06,924 INFO c.z.h.HikariDataSource [Test worker] HikariPool-2 - Starting...
+2023-06-14 21:00:06,955 INFO c.z.h.p.HikariPool [Test worker] HikariPool-2 - Added connection org.testcontainers.jdbc.ConnectionWrapper@13132e66
+2023-06-14 21:00:06,956 INFO c.z.h.HikariDataSource [Test worker] HikariPool-2 - Start completed.
+2023-06-14 21:00:06,961 INFO o.h.e.j.d.i.DialectFactoryImpl [Test worker] HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@47acc2b4
+2023-06-14 21:00:06,970 INFO o.h.b.i.BytecodeProviderInitiator [Test worker] HHH000021: Bytecode provider name : bytebuddy
+2023-06-14 21:00:07,026 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [Test worker] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-14 21:00:07,027 DEBUG o.h.e.j.s.SqlStatementLogger [Test worker] drop table if exists employee cascade
+2023-06-14 21:00:07,031 DEBUG o.h.e.j.s.SqlStatementLogger [Test worker] create table employee (doj date not null, salary float(53) not null, id bigserial not null, gender varchar(255) not null check (gender in ('MALE','FEMALE')), name varchar(255), primary key (id))
+2023-06-14 21:00:07,035 INFO o.h.t.s.i.e.GenerationTargetToDatabase [Test worker] HHH000476: Executing script '[injected ScriptSourceInputNonExistentImpl script]'
+2023-06-14 21:00:07,036 INFO o.s.o.j.AbstractEntityManagerFactoryBean [Test worker] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-14 21:00:07,106 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [Test worker] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-14 21:00:07,413 INFO o.a.j.l.DirectJDKLog [Test worker] Starting ProtocolHandler ["http-nio-auto-1"]
+2023-06-14 21:00:07,436 INFO o.s.b.w.e.t.TomcatWebServer [Test worker] Tomcat started on port(s): 59740 (http) with context path ''
+2023-06-14 21:00:07,442 INFO o.s.b.StartupInfoLogger [Test worker] Started EmployeeControllerAcceptanceTest in 1.17 seconds (process running for 17.423)
+2023-06-14 21:00:07,563 INFO o.a.j.l.DirectJDKLog [http-nio-auto-1-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-14 21:00:07,564 INFO o.s.w.s.FrameworkServlet [http-nio-auto-1-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-06-14 21:00:07,565 INFO o.s.w.s.FrameworkServlet [http-nio-auto-1-exec-1] Completed initialization in 1 ms
+2023-06-14 21:00:07,734 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-auto-1-exec-1] select avg(e1_0.salary) from employee e1_0 where e1_0.gender=?
+2023-06-14 21:00:07,835 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-auto-1-exec-2] select e1_0.id,e1_0.doj,e1_0.gender,e1_0.name,e1_0.salary from employee e1_0 where extract(year from e1_0.doj)=?
+2023-06-14 21:00:08,033 WARN o.z.p.s.c.AdviceTraits [http-nio-auto-1-exec-3] Bad Request: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.ryana.dto.EmployeeDTO> com.ryana.controller.EmployeeController.save(com.ryana.dto.EmployeeDTO) with 4 errors: [Field error in object 'employeeDTO' on field 'gender': rejected value [null]; codes [NotNull.employeeDTO.gender,NotNull.gender,NotNull.com.ryana.domain.Gender,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [employeeDTO.gender,gender]; arguments []; default message [gender]]; default message [must not be null]] [Field error in object 'employeeDTO' on field 'salary': rejected value [null]; codes [NotNull.employeeDTO.salary,NotNull.salary,NotNull.java.lang.Double,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [employeeDTO.salary,salary]; arguments []; default message [salary]]; default message [must not be null]] [Field error in object 'employeeDTO' on field 'name': rejected value [null]; codes [NotBlank.employeeDTO.name,NotBlank.name,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [employeeDTO.name,name]; arguments []; default message [name]]; default message [must not be blank]] [Field error in object 'employeeDTO' on field 'doj': rejected value [null]; codes [NotNull.employeeDTO.doj,NotNull.doj,NotNull.java.time.LocalDate,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [employeeDTO.doj,doj]; arguments []; default message [doj]]; default message [must not be null]] 
+2023-06-14 21:00:08,122 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-auto-1-exec-4] select e1_0.id,e1_0.doj,e1_0.gender,e1_0.name,e1_0.salary from employee e1_0 where e1_0.id=?
+2023-06-14 21:00:08,134 WARN o.z.p.s.c.AdviceTraits [http-nio-auto-1-exec-4] Not Found: Employee is not found...
+2023-06-14 21:00:08,154 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-auto-1-exec-5] select e1_0.id,e1_0.doj,e1_0.gender,e1_0.name,e1_0.salary from employee e1_0
+2023-06-14 21:00:08,173 TRACE c.r.c.EmployeeController [http-nio-auto-1-exec-5] findAll:employeeDTOs=>[EmployeeDTO[id=1, name=Dorothee, gender=FEMALE, doj=2019-08-10, salary=56977.51], EmployeeDTO[id=2, name=Domenico, gender=MALE, doj=2020-10-11, salary=92940.19], EmployeeDTO[id=3, name=Easter, gender=FEMALE, doj=2021-05-28, salary=25854.56], EmployeeDTO[id=4, name=Erastus, gender=MALE, doj=2021-01-03, salary=40683.53], EmployeeDTO[id=5, name=Guillaume, gender=MALE, doj=2021-09-25, salary=27027.14], EmployeeDTO[id=6, name=Maryl, gender=FEMALE, doj=2018-11-01, salary=46478.51], EmployeeDTO[id=7, name=Lucais, gender=MALE, doj=2021-02-09, salary=53336.34], EmployeeDTO[id=8, name=Eleanor, gender=FEMALE, doj=2022-01-07, salary=94425.06], EmployeeDTO[id=9, name=Merla, gender=FEMALE, doj=2020-06-22, salary=89087.34], EmployeeDTO[id=10, name=Bennie, gender=MALE, doj=2022-04-21, salary=51933.9], EmployeeDTO[id=11, name=Franky, gender=MALE, doj=2018-10-23, salary=29326.51], EmployeeDTO[id=12, name=Bernarr, gender=MALE, doj=2019-11-18, salary=45972.36], EmployeeDTO[id=13, name=Marillin, gender=FEMALE, doj=2017-07-22, salary=31756.57], EmployeeDTO[id=14, name=Raquel, gender=FEMALE, doj=2022-06-21, salary=47463.5], EmployeeDTO[id=15, name=Diana, gender=FEMALE, doj=2021-06-10, salary=68749.59], EmployeeDTO[id=16, name=Conant, gender=MALE, doj=2018-10-07, salary=52354.5], EmployeeDTO[id=17, name=Moina, gender=FEMALE, doj=2021-04-04, salary=84220.94], EmployeeDTO[id=18, name=Jobie, gender=FEMALE, doj=2017-06-04, salary=19578.79], EmployeeDTO[id=19, name=Hailey, gender=MALE, doj=2019-12-20, salary=28537.06], EmployeeDTO[id=20, name=Correy, gender=FEMALE, doj=2021-08-09, salary=16570.26], EmployeeDTO[id=21, name=Berry, gender=FEMALE, doj=2018-02-23, salary=22315.5], EmployeeDTO[id=22, name=Britney, gender=FEMALE, doj=2018-05-12, salary=81592.98], EmployeeDTO[id=23, name=Emalia, gender=FEMALE, doj=2022-05-19, salary=90447.6], EmployeeDTO[id=24, name=Kimbell, gender=MALE, doj=2017-10-17, salary=47515.97], EmployeeDTO[id=25, name=Joan, gender=FEMALE, doj=2020-08-14, salary=32871.12], EmployeeDTO[id=26, name=Jock, gender=MALE, doj=2019-01-05, salary=15201.22], EmployeeDTO[id=27, name=Daria, gender=FEMALE, doj=2018-12-04, salary=88945.1], EmployeeDTO[id=28, name=Roberta, gender=FEMALE, doj=2019-10-15, salary=91711.73], EmployeeDTO[id=29, name=Cyndi, gender=FEMALE, doj=2017-06-14, salary=46598.44], EmployeeDTO[id=30, name=Kyle, gender=MALE, doj=2020-07-12, salary=26073.45], EmployeeDTO[id=31, name=Marven, gender=MALE, doj=2019-04-15, salary=86956.91], EmployeeDTO[id=32, name=Chevalier, gender=MALE, doj=2021-09-04, salary=63997.08], EmployeeDTO[id=33, name=Dulce, gender=FEMALE, doj=2020-02-09, salary=76876.55], EmployeeDTO[id=34, name=Ruthe, gender=FEMALE, doj=2019-07-18, salary=53041.36], EmployeeDTO[id=35, name=Jeddy, gender=MALE, doj=2017-12-16, salary=21188.9], EmployeeDTO[id=36, name=Lanie, gender=FEMALE, doj=2021-09-08, salary=73731.73], EmployeeDTO[id=37, name=Faulkner, gender=MALE, doj=2017-05-12, salary=73915.29], EmployeeDTO[id=38, name=Mikey, gender=MALE, doj=2018-12-22, salary=75336.88], EmployeeDTO[id=39, name=Tyrus, gender=MALE, doj=2020-09-20, salary=76427.47], EmployeeDTO[id=40, name=Chrotoem, gender=MALE, doj=2021-05-31, salary=60484.88], EmployeeDTO[id=41, name=Beulah, gender=FEMALE, doj=2021-07-20, salary=99964.14], EmployeeDTO[id=42, name=Upton, gender=MALE, doj=2021-04-08, salary=63976.56], EmployeeDTO[id=43, name=Deloria, gender=FEMALE, doj=2018-12-29, salary=26326.16], EmployeeDTO[id=44, name=Haroun, gender=MALE, doj=2017-08-08, salary=26329.6], EmployeeDTO[id=45, name=Shanda, gender=FEMALE, doj=2020-12-19, salary=49797.68], EmployeeDTO[id=46, name=Giordano, gender=MALE, doj=2019-06-17, salary=25716.98], EmployeeDTO[id=47, name=Davey, gender=MALE, doj=2019-01-06, salary=39060.79], EmployeeDTO[id=48, name=Kerk, gender=MALE, doj=2017-02-09, salary=93625.67], EmployeeDTO[id=49, name=Torrence, gender=MALE, doj=2018-03-15, salary=58440.24], EmployeeDTO[id=50, name=Nahum, gender=MALE, doj=2021-11-22, salary=11770.48], EmployeeDTO[id=51, name=Laverna, gender=FEMALE, doj=2019-08-08, salary=24718.5], EmployeeDTO[id=52, name=Boycie, gender=MALE, doj=2021-07-22, salary=92810.93], EmployeeDTO[id=53, name=Lenna, gender=FEMALE, doj=2020-04-24, salary=85851.04], EmployeeDTO[id=54, name=Dalston, gender=MALE, doj=2020-02-21, salary=89188.91], EmployeeDTO[id=55, name=Ellsworth, gender=MALE, doj=2022-08-06, salary=74357.3], EmployeeDTO[id=56, name=Giselbert, gender=MALE, doj=2020-12-11, salary=35165.01], EmployeeDTO[id=57, name=Herbie, gender=MALE, doj=2019-08-04, salary=46009.13], EmployeeDTO[id=58, name=Radcliffe, gender=MALE, doj=2022-04-13, salary=39050.92], EmployeeDTO[id=59, name=Libbey, gender=FEMALE, doj=2022-04-17, salary=68463.61], EmployeeDTO[id=60, name=Sheridan, gender=MALE, doj=2017-06-29, salary=79000.17], EmployeeDTO[id=61, name=Dieter, gender=MALE, doj=2018-05-05, salary=45988.72], EmployeeDTO[id=62, name=Vite, gender=MALE, doj=2021-08-14, salary=53623.27], EmployeeDTO[id=63, name=Pattie, gender=FEMALE, doj=2017-09-04, salary=88652.19], EmployeeDTO[id=64, name=Sylvia, gender=FEMALE, doj=2020-04-28, salary=26697.53], EmployeeDTO[id=65, name=Arv, gender=MALE, doj=2020-01-29, salary=24834.46], EmployeeDTO[id=66, name=Raddy, gender=MALE, doj=2020-07-10, salary=81729.09], EmployeeDTO[id=67, name=Giraud, gender=MALE, doj=2018-10-25, salary=66211.07], EmployeeDTO[id=68, name=Ram, gender=MALE, doj=2017-11-02, salary=50770.14], EmployeeDTO[id=69, name=Craggie, gender=MALE, doj=2019-05-13, salary=11698.11], EmployeeDTO[id=70, name=Jonie, gender=FEMALE, doj=2021-05-14, salary=93558.43], EmployeeDTO[id=71, name=Jemima, gender=FEMALE, doj=2020-12-30, salary=67440.35], EmployeeDTO[id=72, name=Bendicty, gender=MALE, doj=2021-04-08, salary=31203.92], EmployeeDTO[id=73, name=Laurianne, gender=FEMALE, doj=2022-07-10, salary=39404.43], EmployeeDTO[id=74, name=Lanna, gender=FEMALE, doj=2019-03-14, salary=39736.9], EmployeeDTO[id=75, name=Shirleen, gender=FEMALE, doj=2018-04-13, salary=88042.98], EmployeeDTO[id=76, name=Zerk, gender=MALE, doj=2018-09-25, salary=74699.43], EmployeeDTO[id=77, name=Ilaire, gender=MALE, doj=2020-12-12, salary=92247.33], EmployeeDTO[id=78, name=Wade, gender=MALE, doj=2021-12-24, salary=25507.16], EmployeeDTO[id=79, name=Tabitha, gender=FEMALE, doj=2022-02-27, salary=85163.52], EmployeeDTO[id=80, name=Norry, gender=FEMALE, doj=2018-05-02, salary=96649.66], EmployeeDTO[id=81, name=Cole, gender=MALE, doj=2017-08-10, salary=99226.23], EmployeeDTO[id=82, name=Ode, gender=MALE, doj=2017-03-20, salary=66590.29], EmployeeDTO[id=83, name=Tabbitha, gender=FEMALE, doj=2019-12-12, salary=86380.45], EmployeeDTO[id=84, name=Del, gender=FEMALE, doj=2021-09-23, salary=91432.2], EmployeeDTO[id=85, name=Candra, gender=FEMALE, doj=2021-09-25, salary=39076.55], EmployeeDTO[id=86, name=Joey, gender=MALE, doj=2021-06-30, salary=48912.88], EmployeeDTO[id=87, name=Lannie, gender=MALE, doj=2017-11-19, salary=60877.07], EmployeeDTO[id=88, name=Joane, gender=FEMALE, doj=2020-01-29, salary=88186.07], EmployeeDTO[id=89, name=Lesley, gender=MALE, doj=2019-05-10, salary=13316.13], EmployeeDTO[id=90, name=Basilio, gender=MALE, doj=2021-11-28, salary=71399.93], EmployeeDTO[id=91, name=Obed, gender=MALE, doj=2018-11-26, salary=64696.44], EmployeeDTO[id=92, name=Giff, gender=MALE, doj=2019-08-07, salary=38282.73], EmployeeDTO[id=93, name=Gordan, gender=MALE, doj=2017-01-17, salary=60318.02], EmployeeDTO[id=94, name=Angelico, gender=MALE, doj=2019-02-14, salary=88098.98], EmployeeDTO[id=95, name=Ginnie, gender=FEMALE, doj=2017-01-08, salary=59994.07], EmployeeDTO[id=96, name=Hogan, gender=MALE, doj=2018-10-30, salary=85567.81], EmployeeDTO[id=97, name=Cassie, gender=FEMALE, doj=2021-09-11, salary=20352.32], EmployeeDTO[id=98, name=Marv, gender=MALE, doj=2021-04-04, salary=80959.26], EmployeeDTO[id=99, name=Der, gender=MALE, doj=2018-04-07, salary=52445.96], EmployeeDTO[id=100, name=Marcelline, gender=FEMALE, doj=2019-12-01, salary=67029.68]]
+2023-06-14 21:00:08,205 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-auto-1-exec-6] select e1_0.id,e1_0.doj,e1_0.gender,e1_0.name,e1_0.salary from employee e1_0 where e1_0.id=?
+2023-06-14 21:00:08,243 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-auto-1-exec-6] delete from employee where id=?
+2023-06-14 21:00:08,255 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-auto-1-exec-7] select e1_0.id,e1_0.doj,e1_0.gender,e1_0.name,e1_0.salary from employee e1_0 where e1_0.id=?
+2023-06-14 21:00:08,258 WARN o.z.p.s.c.AdviceTraits [http-nio-auto-1-exec-7] Not Found: Employee is not found...
+2023-06-14 21:00:08,268 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-auto-1-exec-8] select avg(e1_0.salary) from employee e1_0 where e1_0.gender=?
+2023-06-14 21:00:08,283 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-auto-1-exec-9] select e1_0.id,e1_0.doj,e1_0.gender,e1_0.name,e1_0.salary from employee e1_0 where e1_0.id=?
+2023-06-14 21:00:08,302 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-auto-1-exec-9] update employee set doj=?,gender=?,name=?,salary=? where id=?
+2023-06-14 21:00:08,330 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-auto-1-exec-10] insert into employee (doj,gender,name,salary) values (?,?,?,?)
+2023-06-14 21:00:08,356 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-auto-1-exec-1] select e1_0.id,e1_0.doj,e1_0.gender,e1_0.name,e1_0.salary from employee e1_0 where extract(year from e1_0.doj)=?
+2023-06-14 21:00:08,364 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-auto-1-exec-2] select e1_0.id,e1_0.doj,e1_0.gender,e1_0.name,e1_0.salary from employee e1_0 where e1_0.id=?
+2023-06-14 21:00:08,375 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-auto-1-exec-3] select e1_0.id,e1_0.doj,e1_0.gender,e1_0.name,e1_0.salary from employee e1_0 where e1_0.id=?
+2023-06-14 21:00:08,378 WARN o.z.p.s.c.AdviceTraits [http-nio-auto-1-exec-3] Not Found: Employee is not found...
+2023-06-14 21:00:08,391 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [Test worker] Could not detect default configuration classes for test class [com.ryana.controller.EmployeeControllerSliceTest]: EmployeeControllerSliceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-06-14 21:00:08,418 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [Test worker] Found @SpringBootConfiguration com.ryana.Application for test class com.ryana.controller.EmployeeControllerSliceTest
+2023-06-14 21:00:08,444 INFO o.s.b.StartupInfoLogger [Test worker] Starting EmployeeControllerSliceTest using Java 20 with PID 1052 (started by 91890 in D:\WORKOUT\VS_CODE\employee-management-github-actions-demo)
+2023-06-14 21:00:08,445 DEBUG o.s.b.StartupInfoLogger [Test worker] Running with Spring Boot v3.1.0, Spring v6.0.9
+2023-06-14 21:00:08,445 INFO o.s.b.SpringApplication [Test worker] No active profile set, falling back to 1 default profile: "default"
+2023-06-14 21:00:09,278 INFO o.s.m.w.MockServletContext [Test worker] Initializing Spring TestDispatcherServlet ''
+2023-06-14 21:00:09,278 INFO o.s.w.s.FrameworkServlet [Test worker] Initializing Servlet ''
+2023-06-14 21:00:09,280 INFO o.s.w.s.FrameworkServlet [Test worker] Completed initialization in 1 ms
+2023-06-14 21:00:09,299 INFO o.s.b.StartupInfoLogger [Test worker] Started EmployeeControllerSliceTest in 0.878 seconds (process running for 19.279)
+2023-06-14 21:00:09,628 WARN o.s.w.s.h.AbstractHandlerExceptionResolver [Test worker] Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.ryana.dto.EmployeeDTO> com.ryana.controller.EmployeeController.save(com.ryana.dto.EmployeeDTO): [Field error in object 'employeeDTO' on field 'name': rejected value [null]; codes [NotBlank.employeeDTO.name,NotBlank.name,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [employeeDTO.name,name]; arguments []; default message [name]]; default message [must not be blank]] ]
+2023-06-14 21:00:09,668 TRACE c.r.c.EmployeeController [Test worker] findAll:employeeDTOs=>[EmployeeDTO[id=1, name=sharath, gender=MALE, doj=2020-01-05, salary=10000.0], EmployeeDTO[id=2, name=kumar, gender=MALE, doj=2021-12-15, salary=20000.0]]
+2023-06-14 21:00:09,921 INFO o.s.m.w.MockServletContext [Test worker] Initializing Spring TestDispatcherServlet ''
+2023-06-14 21:00:09,922 INFO o.s.w.s.FrameworkServlet [Test worker] Initializing Servlet ''
+2023-06-14 21:00:09,923 INFO o.s.w.s.FrameworkServlet [Test worker] Completed initialization in 1 ms
+2023-06-14 21:00:09,962 INFO o.s.m.w.MockServletContext [Test worker] Initializing Spring TestDispatcherServlet ''
+2023-06-14 21:00:09,962 INFO o.s.w.s.FrameworkServlet [Test worker] Initializing Servlet ''
+2023-06-14 21:00:09,963 INFO o.s.w.s.FrameworkServlet [Test worker] Completed initialization in 1 ms
+2023-06-14 21:00:09,996 INFO o.s.m.w.MockServletContext [Test worker] Initializing Spring TestDispatcherServlet ''
+2023-06-14 21:00:09,996 INFO o.s.w.s.FrameworkServlet [Test worker] Initializing Servlet ''
+2023-06-14 21:00:09,997 INFO o.s.w.s.FrameworkServlet [Test worker] Completed initialization in 0 ms
+2023-06-14 21:00:10,016 WARN o.s.w.s.h.AbstractHandlerExceptionResolver [Test worker] Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.ryana.dto.EmployeeDTO> com.ryana.controller.EmployeeController.save(com.ryana.dto.EmployeeDTO): [Field error in object 'employeeDTO' on field 'name': rejected value [null]; codes [NotBlank.employeeDTO.name,NotBlank.name,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [employeeDTO.name,name]; arguments []; default message [name]]; default message [must not be blank]] ]
+2023-06-14 21:00:10,035 INFO o.s.m.w.MockServletContext [Test worker] Initializing Spring TestDispatcherServlet ''
+2023-06-14 21:00:10,035 INFO o.s.w.s.FrameworkServlet [Test worker] Initializing Servlet ''
+2023-06-14 21:00:10,036 INFO o.s.w.s.FrameworkServlet [Test worker] Completed initialization in 0 ms
+2023-06-14 21:00:10,067 INFO o.s.m.w.MockServletContext [Test worker] Initializing Spring TestDispatcherServlet ''
+2023-06-14 21:00:10,068 INFO o.s.w.s.FrameworkServlet [Test worker] Initializing Servlet ''
+2023-06-14 21:00:10,069 INFO o.s.w.s.FrameworkServlet [Test worker] Completed initialization in 1 ms
+2023-06-14 21:00:10,071 TRACE c.r.c.EmployeeController [Test worker] findAll:employeeDTOs=>[EmployeeDTO[id=1, name=sharath, gender=MALE, doj=2020-01-05, salary=10000.0], EmployeeDTO[id=2, name=kumar, gender=MALE, doj=2021-12-15, salary=20000.0]]
+2023-06-14 21:00:10,103 INFO o.s.m.w.MockServletContext [Test worker] Initializing Spring TestDispatcherServlet ''
+2023-06-14 21:00:10,103 INFO o.s.w.s.FrameworkServlet [Test worker] Initializing Servlet ''
+2023-06-14 21:00:10,104 INFO o.s.w.s.FrameworkServlet [Test worker] Completed initialization in 0 ms
+2023-06-14 21:00:10,133 INFO o.s.m.w.MockServletContext [Test worker] Initializing Spring TestDispatcherServlet ''
+2023-06-14 21:00:10,133 INFO o.s.w.s.FrameworkServlet [Test worker] Initializing Servlet ''
+2023-06-14 21:00:10,133 INFO o.s.w.s.FrameworkServlet [Test worker] Completed initialization in 0 ms
+2023-06-14 21:00:10,155 INFO o.s.m.w.MockServletContext [Test worker] Initializing Spring TestDispatcherServlet ''
+2023-06-14 21:00:10,155 INFO o.s.w.s.FrameworkServlet [Test worker] Initializing Servlet ''
+2023-06-14 21:00:10,156 INFO o.s.w.s.FrameworkServlet [Test worker] Completed initialization in 0 ms
+2023-06-14 21:00:10,204 INFO o.s.m.w.MockServletContext [Test worker] Initializing Spring TestDispatcherServlet ''
+2023-06-14 21:00:10,204 INFO o.s.w.s.FrameworkServlet [Test worker] Initializing Servlet ''
+2023-06-14 21:00:10,205 INFO o.s.w.s.FrameworkServlet [Test worker] Completed initialization in 0 ms
+2023-06-14 21:00:10,240 INFO o.s.m.w.MockServletContext [Test worker] Initializing Spring TestDispatcherServlet ''
+2023-06-14 21:00:10,240 INFO o.s.w.s.FrameworkServlet [Test worker] Initializing Servlet ''
+2023-06-14 21:00:10,241 INFO o.s.w.s.FrameworkServlet [Test worker] Completed initialization in 0 ms
+2023-06-14 21:00:10,263 INFO o.s.m.w.MockServletContext [Test worker] Initializing Spring TestDispatcherServlet ''
+2023-06-14 21:00:10,264 INFO o.s.w.s.FrameworkServlet [Test worker] Initializing Servlet ''
+2023-06-14 21:00:10,264 INFO o.s.w.s.FrameworkServlet [Test worker] Completed initialization in 0 ms
+2023-06-14 21:00:10,286 INFO o.s.m.w.MockServletContext [Test worker] Initializing Spring TestDispatcherServlet ''
+2023-06-14 21:00:10,287 INFO o.s.w.s.FrameworkServlet [Test worker] Initializing Servlet ''
+2023-06-14 21:00:10,287 INFO o.s.w.s.FrameworkServlet [Test worker] Completed initialization in 0 ms
+2023-06-14 21:00:10,313 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [Test worker] Could not detect default configuration classes for test class [com.ryana.repository.EmployeeRepositoryTest]: EmployeeRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-06-14 21:00:10,332 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [Test worker] Found @SpringBootConfiguration com.ryana.Application for test class com.ryana.repository.EmployeeRepositoryTest
+2023-06-14 21:00:10,376 INFO o.s.b.StartupInfoLogger [Test worker] Starting EmployeeRepositoryTest using Java 20 with PID 1052 (started by 91890 in D:\WORKOUT\VS_CODE\employee-management-github-actions-demo)
+2023-06-14 21:00:10,377 DEBUG o.s.b.StartupInfoLogger [Test worker] Running with Spring Boot v3.1.0, Spring v6.0.9
+2023-06-14 21:00:10,377 INFO o.s.b.SpringApplication [Test worker] No active profile set, falling back to 1 default profile: "default"
+2023-06-14 21:00:10,491 INFO o.s.d.r.c.RepositoryConfigurationDelegate [Test worker] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-14 21:00:10,502 INFO o.s.d.r.c.RepositoryConfigurationDelegate [Test worker] Finished Spring Data repository scanning in 10 ms. Found 1 JPA repository interfaces.
+2023-06-14 21:00:10,595 INFO o.h.j.i.u.LogHelper [Test worker] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-14 21:00:10,605 INFO o.h.b.i.BytecodeProviderInitiator [Test worker] HHH000021: Bytecode provider name : bytebuddy
+2023-06-14 21:00:10,606 INFO o.s.o.j.p.SpringPersistenceUnitInfo [Test worker] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-14 21:00:10,607 INFO c.z.h.HikariDataSource [Test worker] HikariPool-3 - Starting...
+2023-06-14 21:00:10,680 INFO c.z.h.p.HikariPool [Test worker] HikariPool-3 - Added connection org.testcontainers.jdbc.ConnectionWrapper@562d4113
+2023-06-14 21:00:10,682 INFO c.z.h.HikariDataSource [Test worker] HikariPool-3 - Start completed.
+2023-06-14 21:00:10,691 INFO o.h.e.j.d.i.DialectFactoryImpl [Test worker] HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$DialectResolutionInfoImpl@5b79b600
+2023-06-14 21:00:10,706 INFO o.h.b.i.BytecodeProviderInitiator [Test worker] HHH000021: Bytecode provider name : bytebuddy
+2023-06-14 21:00:10,750 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [Test worker] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-14 21:00:10,752 DEBUG o.h.e.j.s.SqlStatementLogger [Test worker] drop table if exists employee cascade
+2023-06-14 21:00:10,756 DEBUG o.h.e.j.s.SqlStatementLogger [Test worker] create table employee (doj date not null, salary float(53) not null, id bigserial not null, gender varchar(255) not null check (gender in ('MALE','FEMALE')), name varchar(255), primary key (id))
+2023-06-14 21:00:10,762 INFO o.h.t.s.i.e.GenerationTargetToDatabase [Test worker] HHH000476: Executing script '[injected ScriptSourceInputNonExistentImpl script]'
+2023-06-14 21:00:10,763 INFO o.s.o.j.AbstractEntityManagerFactoryBean [Test worker] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-14 21:00:11,025 INFO o.s.b.StartupInfoLogger [Test worker] Started EmployeeRepositoryTest in 0.689 seconds (process running for 21.006)
+2023-06-14 21:00:11,046 DEBUG o.h.e.j.s.SqlStatementLogger [Test worker] select e1_0.id,e1_0.doj,e1_0.gender,e1_0.name,e1_0.salary from employee e1_0 where extract(year from e1_0.doj)=?
+2023-06-14 21:00:11,077 DEBUG o.h.e.j.s.SqlStatementLogger [Test worker] select avg(e1_0.salary) from employee e1_0 where e1_0.gender=?
+2023-06-14 21:00:11,099 DEBUG o.h.e.j.s.SqlStatementLogger [Test worker] select avg(e1_0.salary) from employee e1_0 where e1_0.gender=?
+2023-06-14 21:00:11,327 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-14 21:00:11,635 INFO o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl [SpringApplicationShutdownHook] HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023-06-14 21:00:11,637 DEBUG o.h.e.j.s.SqlStatementLogger [SpringApplicationShutdownHook] drop table if exists employee cascade
+2023-06-14 21:00:11,645 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-06-14 21:00:11,652 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-06-14 21:00:11,684 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-14 21:00:11,685 INFO o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl [SpringApplicationShutdownHook] HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023-06-14 21:00:11,685 DEBUG o.h.e.j.s.SqlStatementLogger [SpringApplicationShutdownHook] drop table if exists employee cascade
+2023-06-14 21:00:11,688 WARN o.h.e.j.s.SqlExceptionHelper$StandardWarningHandler [SpringApplicationShutdownHook] SQL Warning Code: 0, SQLState: 00000
+2023-06-14 21:00:11,689 WARN o.h.e.j.s.SqlExceptionHelper$StandardWarningHandler [SpringApplicationShutdownHook] table "employee" does not exist, skipping
+2023-06-14 21:00:11,690 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-2 - Shutdown initiated...
+2023-06-14 21:00:11,695 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-2 - Shutdown completed.
+2023-06-14 21:00:11,698 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-14 21:00:11,699 INFO o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl [SpringApplicationShutdownHook] HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023-06-14 21:00:11,699 DEBUG o.h.e.j.s.SqlStatementLogger [SpringApplicationShutdownHook] drop table if exists employee cascade
+2023-06-14 21:00:11,703 WARN o.h.e.j.s.SqlExceptionHelper$StandardWarningHandler [SpringApplicationShutdownHook] SQL Warning Code: 0, SQLState: 00000
+2023-06-14 21:00:11,703 WARN o.h.e.j.s.SqlExceptionHelper$StandardWarningHandler [SpringApplicationShutdownHook] table "employee" does not exist, skipping
+2023-06-14 21:00:11,703 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-3 - Shutdown initiated...
+2023-06-14 21:00:12,181 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-3 - Shutdown completed.
