@@ -26,7 +26,6 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: "20"
-          distribution: "temurin"
-          cache: gradle
+          distribution: "temurin"         
       - name: Build with Gradle
-        run: gradle clean build
+        run: gradlew clean build
