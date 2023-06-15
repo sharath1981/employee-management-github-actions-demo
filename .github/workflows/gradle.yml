@@ -48,11 +48,11 @@ jobs:
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
         with:
-          username: $DOCKERHUB_USERNAME
-          password: $DOCKERHUB_PASSWORD
+          username: sharath1981
+          password: dckr_pat_mkc7kbplWnRZMiGO48H5v0q-Qik
 
-      - name: Tag Docker Image
-        run: docker tag $APPLICATION_NAME:$APPLICATION_VERSION $DOCKERHUB_USERNAME/$APPLICATION_NAME:$IMAGE_TAG
+      # - name: Tag Docker Image
+      #   run: docker tag $APPLICATION_NAME:$APPLICATION_VERSION $DOCKERHUB_USERNAME/$APPLICATION_NAME:$IMAGE_TAG
 
-      - name: Push Docker Image
-        run: docker push $DOCKERHUB_USERNAME/$APPLICATION_NAME:$IMAGE_TAG
+      # - name: Push Docker Image
+      #   run: docker push $DOCKERHUB_USERNAME/$APPLICATION_NAME:$IMAGE_TAG
