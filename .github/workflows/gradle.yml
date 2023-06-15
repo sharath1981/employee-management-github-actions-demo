@@ -15,7 +15,6 @@ on:
 
 permissions:
   contents: read
-  # packages: write
 
 env:
   DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
@@ -34,10 +33,10 @@ jobs:
         with:
           java-version: "20"
           distribution: "corretto"
-          # cache: gradle
+          cache: gradle
 
       - name: Build and Test
-        run: chmod +x ./gradlew clean build
+        run: gradle clean build --console=plain
 
       - name: Build Docker Image
-        run: chmod +x ./gradlew bootBuildImage
+        run: gradle bootBuildImage --console=plain
