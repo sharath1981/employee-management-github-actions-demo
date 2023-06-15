@@ -19,6 +19,9 @@ permissions:
 env:
   DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
   DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
+  APPLICATION_NAME: ${{ secrets.APPLICATION_NAME }}
+  APPLICATION_VERSION: ${{ secrets.APPLICATION_VERSION }}
+  IMAGE_TAG: ${{ secrets.IMAGE_TAG }}
 
 jobs:
   build:
@@ -33,22 +36,19 @@ jobs:
         with:
           java-version: "20"
           distribution: "corretto"
-          # cache: gradle
-
-      - name: Grant x permission to gradlew
-        run: chmod +x gradlew
+          cache: gradle
 
       - name: Build and Test
-        run: ./gradlew clean build --console=plain
+        run: gradle clean build --console=plain
 
       - name: Build Docker Image
-        run: ./gradlew bootBuildImage --console=plain
+        run: gradle bootBuildImage --console=plain
 
-      # - name: Log in to Docker Hub
-      #   run: docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD
+      - name: Log in to Docker Hub
+        run: docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD
 
-      # - name: Tag Docker image
-      #   run: docker tag your-application:latest $DOCKERHUB_USERNAME/your-application:latest
+      - name: Tag Docker image
+        run: docker tag $APPLICATION_NAME:$APPLICATION_VERSION $DOCKERHUB_USERNAME/$APPLICATION_NAME:$IMAGE_TAG
 
-      # - name: Push Docker image
-      #   run: docker push $DOCKERHUB_USERNAME/your-application:latest
+      - name: Push Docker image
+        run: docker push $DOCKERHUB_USERNAME/$APPLICATION_NAME:$IMAGE_TAG
