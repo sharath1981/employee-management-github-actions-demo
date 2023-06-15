@@ -14,8 +14,8 @@ on:
     branches: ["main"]
 
 permissions:
-  contents: write
-  packages: write
+  contents: read
+  # packages: write
 
 env:
   DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
@@ -37,7 +37,7 @@ jobs:
           # cache: gradle
 
       - name: Build and Test
-        run: ./gradlew clean build --console=plain
+        run: chmod +x ./gradlew clean build --console=plain
 
       - name: Build Docker Image
         run: ./gradlew bootBuildImage --console=plain
