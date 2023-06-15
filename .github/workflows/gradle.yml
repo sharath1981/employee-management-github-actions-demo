@@ -13,8 +13,8 @@ on:
   pull_request:
     branches: ["main"]
 
-permissions:
-  contents: read
+# permissions:
+#   contents: read
 
 env:
   DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
