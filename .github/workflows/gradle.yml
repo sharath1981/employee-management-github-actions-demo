@@ -16,14 +16,6 @@ on:
 permissions:
   contents: read
 
-env:
-  DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
-  DOCKERHUB_EMAIL: ${{ secrets.DOCKERHUB_EMAIL }}
-  DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
-  APPLICATION_NAME: ${{ secrets.APPLICATION_NAME }}
-  APPLICATION_VERSION: ${{ secrets.APPLICATION_VERSION }}
-  IMAGE_TAG: ${{ secrets.IMAGE_TAG }}
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -48,11 +40,11 @@ jobs:
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
         with:
-          username: sharath1981
-          password: dckr_pat_mkc7kbplWnRZMiGO48H5v0q-Qik
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
-      # - name: Tag Docker Image
-      #   run: docker tag $APPLICATION_NAME:$APPLICATION_VERSION $DOCKERHUB_USERNAME/$APPLICATION_NAME:$IMAGE_TAG
+      - name: Tag Docker Image
+        run: docker tag ${{ secrets.APPLICATION_NAME }}:${{ secrets.APPLICATION_VERSION }} ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.APPLICATION_NAME }}:latest
 
-      # - name: Push Docker Image
-      #   run: docker push $DOCKERHUB_USERNAME/$APPLICATION_NAME:$IMAGE_TAG
+      - name: Push Docker Image
+        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.APPLICATION_NAME }}:latest
