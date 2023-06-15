@@ -32,11 +32,11 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: "20"
-          # distribution: "temurin"
-          cache: gradle
+          distribution: "corretto"
+          # cache: gradle
 
       - name: Build and Test
-        run: gradle clean build --console=plain
+        run: ./gradlew clean build --console=plain
 
       - name: Build Docker Image
-        run: gradle bootBuildImage --console=plain
+        run: ./gradlew bootBuildImage --console=plain
