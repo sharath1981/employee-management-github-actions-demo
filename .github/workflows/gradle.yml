@@ -37,7 +37,7 @@ jobs:
           # cache: gradle
 
       - name: Build and Test
-        run: chmod +x ./gradlew clean build --console=plain
+        run: chmod +x ./gradlew clean build
 
       - name: Build Docker Image
-        run: ./gradlew bootBuildImage --console=plain
+        run: chmod +x ./gradlew bootBuildImage
