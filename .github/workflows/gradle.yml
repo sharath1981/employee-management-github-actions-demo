@@ -39,15 +39,6 @@ jobs:
           distribution: "corretto"
           cache: gradle
 
-      - name: Eco secrets
-        run: |
-          echo $DOCKERHUB_USERNAME
-          echo $DOCKERHUB_EMAIL
-          echo $DOCKERHUB_PASSWORD
-          echo $APPLICATION_NAME
-          echo $APPLICATION_VERSION
-          echo $IMAGE_TAG
-
       - name: Build and Test
         run: gradle clean build --console=plain
 
@@ -57,7 +48,7 @@ jobs:
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
         with:
-          username: $DOCKERHUB_EMAIL
+          username: $DOCKERHUB_USERNAME
           password: $DOCKERHUB_PASSWORD
 
       - name: Tag Docker Image
