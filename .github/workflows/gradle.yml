@@ -39,6 +39,15 @@ jobs:
           distribution: "corretto"
           cache: gradle
 
+      - name: Eco secrets
+        run: |
+          echo $DOCKERHUB_USERNAME
+          echo $DOCKERHUB_EMAIL
+          echo $DOCKERHUB_PASSWORD
+          echo $APPLICATION_NAME
+          echo $APPLICATION_VERSION
+          echo $IMAGE_TAG
+
       - name: Build and Test
         run: gradle clean build --console=plain
 
