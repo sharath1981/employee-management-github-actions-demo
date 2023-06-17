@@ -68,8 +68,11 @@ sonar {
     properties {
      	// property "sonar.login", "admin"
      	// property "sonar.password", "admin123"
-	    property 'sonar.token', 'squ_26b716fd04ea8c534d767676f9b70bcde72e9ab4'
-	    property 'sonar.projectName', 'Employee Management Github Actions Demo'
+	    
         property 'sonar.dependencyCheck.htmlReportPath', './build/reports/dependency-check-report.html'
-    }
+		property 'sonar.projectName', 'employee-management-github-actions-demo'
+		property "sonar.projectKey", "sharath1981_employee-management-github-actions-demo"
+    	property "sonar.organization", "sharath1981-organization-key"
+    	property "sonar.host.url", "https://sonarcloud.io"
+	}
 }
