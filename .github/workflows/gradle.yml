@@ -37,7 +37,7 @@ jobs:
       - name: OWASP Dependency Check
         run: gradle dependencyCheckAnalyze
 
-      - name: Sonar Scan
+      - name: SonarCloud Scan
         run: gradle sonar
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
