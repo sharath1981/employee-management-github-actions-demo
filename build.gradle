@@ -56,6 +56,19 @@ tasks.named('test') {
 	finalizedBy jacocoTestReport
 }
 
+tasks.named("bootBuildImage") {
+	// imageName.set("docker.example.com/library/${project.name}")
+	publish = true
+	// docker {
+	// 	publishRegistry {
+	// 		username = "user"
+	// 		password = "secret"
+	// 	}
+	// }
+}
+
+
+
 jacocoTestReport{                 
 	dependsOn test
 	reports {
@@ -66,9 +79,6 @@ jacocoTestReport{
 
 sonar {
     properties {
-     	// property "sonar.login", "admin"
-     	// property "sonar.password", "admin123"
-	    
         property 'sonar.dependencyCheck.htmlReportPath', './build/reports/dependency-check-report.html'
 		property 'sonar.projectName', 'employee-management-github-actions-demo'
 		property "sonar.projectKey", "sharath1981_employee-management-github-actions-demo"
