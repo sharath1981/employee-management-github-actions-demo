@@ -49,4 +49,4 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build and Push Docker Image
-        run: gradle bootBuildImage
+        run: gradle bootBuildImage --publishImage
