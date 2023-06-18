@@ -56,4 +56,3 @@ jobs:
 
       - name: Push Docker Image
         run: docker push ${{ secrets.APPLICATION_NAME }}:${{ secrets.APPLICATION_VERSION }}
-      - run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.APPLICATION_NAME }}
