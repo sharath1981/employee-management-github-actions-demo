@@ -55,4 +55,6 @@ jobs:
         run: docker tag ${{ secrets.APPLICATION_NAME }}:${{ secrets.APPLICATION_VERSION }} ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.APPLICATION_NAME }}
 
       - name: Push Docker Image
-        run: docker push ${{ secrets.APPLICATION_NAME }}:${{ secrets.APPLICATION_VERSION }}
+        run: |
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.APPLICATION_NAME }}
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.APPLICATION_NAME }}:${{ secrets.APPLICATION_VERSION }}
