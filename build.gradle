@@ -65,7 +65,7 @@ jacocoTestReport{
 }
 
 tasks.named("bootBuildImage") {
-	imageName.set("docker.example.com/library/${project.name}")
+	imageName.set("docker.io/library/${project.name}")
 	publish = true
 	docker {
 		publishRegistry {
