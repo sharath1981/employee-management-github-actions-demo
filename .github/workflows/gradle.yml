@@ -52,4 +52,4 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Push Docker Image
-        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.APPLICATION_NAME }}
+        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.APPLICATION_NAME }}::${{ secrets.APPLICATION_VERSION }}
