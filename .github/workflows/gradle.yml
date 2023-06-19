@@ -54,4 +54,5 @@ jobs:
       - name: Push Docker Image
         run: |
           docker tag ${{ secrets.APPLICATION_NAME }}:${{ secrets.APPLICATION_VERSION }} ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.APPLICATION_NAME }}
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/docker.io/library/${{ secrets.APPLICATION_NAME }}:${{ secrets.APPLICATION_VERSION }}
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.APPLICATION_NAME }}
