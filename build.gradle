@@ -64,6 +64,17 @@ jacocoTestReport{
     }
 }
 
+tasks.named("bootBuildImage") {
+	imageName.set("docker.example.com/library/${project.name}")
+	publish = true
+	docker {
+		publishRegistry {
+			username = '${secrets.DOCKERHUB_USERNAME}'
+			password = '${secrets.DOCKERHUB_TOKEN}'
+		}
+	}
+}
+
 sonar {
     properties {
         property 'sonar.dependencyCheck.htmlReportPath', './build/reports/dependency-check-report.html'
