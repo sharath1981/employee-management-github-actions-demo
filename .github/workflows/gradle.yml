@@ -55,4 +55,4 @@ jobs:
         run: |
           docker tag ${{ secrets.APPLICATION_NAME }}:${{ secrets.APPLICATION_VERSION }} ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.APPLICATION_NAME }}
           docker tag ${{ secrets.APPLICATION_NAME }}:${{ secrets.APPLICATION_VERSION }} ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.APPLICATION_NAME }}:${{ secrets.APPLICATION_VERSION }}
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.APPLICATION_NAME }} --all
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.APPLICATION_NAME }} -a
