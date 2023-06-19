@@ -67,12 +67,12 @@ jacocoTestReport{
 tasks.named("bootBuildImage") {
 	imageName.set("docker.io/library/${project.name}:${project.version}")
 	publish = true
-	docker {
-		publishRegistry {
-			username = '${DOCKERHUB_USERNAME}'
-			password = '${DOCKERHUB_TOKEN}'
-		}
-	}
+	// docker {
+	// 	publishRegistry {
+	// 		username = '${DOCKERHUB_USERNAME}'
+	// 		password = '${DOCKERHUB_TOKEN}'
+	// 	}
+	// }
 }
 
 sonar {
