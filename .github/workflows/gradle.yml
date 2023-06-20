@@ -34,13 +34,10 @@ jobs:
       - name: Build and Test
         run: gradle clean build
 
-      # - name: OWASP Dependency Check
-      #   run: gradle dependencyCheckAnalyze
-
-      # - name: SonarCloud Scan
-      #   run: gradle sonar
-      #   env:
-      #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      - name: Sonar Scan Sonarcloud
+        run: gradle sonar
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
       - name: Build Docker Image
         run: gradle bootBuildImage
@@ -52,4 +49,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Push Docker Image
-        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.APPLICATION_NAME }} -a
+        run: |
+          docker tag ${{ secrets.APPLICATION_NAME }}:${{ secrets.APPLICATION_VERSION }} ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.APPLICATION_NAME }}
+          docker tag ${{ secrets.APPLICATION_NAME }}:${{ secrets.APPLICATION_VERSION }} ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.APPLICATION_NAME }}:${{ secrets.APPLICATION_VERSION }}
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.APPLICATION_NAME }} -a
