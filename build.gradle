@@ -64,15 +64,6 @@ jacocoTestReport{
     }
 }
 
-tasks.named("bootBuildImage") {
-	imageName.set("docker.io/library/${project.name}:${project.version}")
-	publish = true
-	docker {
-		publishRegistry {
-		}
-	}
-}
-
 sonar {
     properties {
         property 'sonar.dependencyCheck.htmlReportPath', './build/reports/dependency-check-report.html'
