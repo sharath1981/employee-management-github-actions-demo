@@ -65,6 +65,7 @@ jacocoTestReport{
 }
 
 tasks.named('bootBuildImage') {
+	imageName.set("${project.name}:${project.version}")
 	tags = ["${project.name}:latest", "${project.name}:${project.version}"]
 }
 
