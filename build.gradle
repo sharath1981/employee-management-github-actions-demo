@@ -65,7 +65,10 @@ jacocoTestReport{
 }
 
 tasks.named('bootBuildImage') {
-	tags = ["${rootProject.name}:latest"]
+	println "Project Name: ${project.name}"
+	println "Project Name: ${rootProject.name}"
+        println "Project Version: ${project.version}"
+	//tags = ["${rootProject.name}:latest"]
 }
 
 sonar {
